@@ -1,0 +1,13 @@
+{
+  "columns": [
+    { "name": "mpg",          "type": "number", "label": "Miles per Gallon" },
+    { "name": "cylinders",    "type": "number", "label": "Number of Cylinders" },
+    { "name": "displacement", "type": "number", "label": "Displacement" },
+    { "name": "horsepower",   "type": "number", "label": "Horsepower" },
+    { "name": "weight",       "type": "number", "label": "Weight" },
+    { "name": "acceleration", "type": "number", "label": "Acceleration" },
+    { "name": "year",         "type": "string", "label": "Year" },
+    { "name": "origin",       "type": "string", "label": "Origin" },
+    { "name": "name",         "type": "string", "label": "Name" }
+  ]
+}

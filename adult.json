@@ -1,0 +1,19 @@
+{
+  "columns": [
+    { "name": "age",             "type": "number", "label": "Age" },
+    { "name": "workclass",       "type": "string", "label": "Work Class" },
+    { "name": "fnlwgt",          "type": "number", "label": "Fnlwgt" },
+    { "name": "education",       "type": "string", "label": "Education" },
+    { "name": "education-num",   "type": "number", "label": "Education Number" },
+    { "name": "marital-status",  "type": "string", "label": "Marital Status" },
+    { "name": "occupation",      "type": "string", "label": "Occupation" },
+    { "name": "relationship",    "type": "string", "label": "Relationship" },
+    { "name": "race",            "type": "string", "label": "Race" },
+    { "name": "sex",             "type": "string", "label": "Sex" },
+    { "name": "capital-gain",    "type": "number", "label": "Capital Gain" },
+    { "name": "capital-loss",    "type": "number", "label": "Capital Loss" },
+    { "name": "hours-per-week",  "type": "number", "label": "Hours Per Week" },
+    { "name": "native-country",  "type": "string", "label": "Native Country" },
+    { "name": "income-category", "type": "string", "label": "Income Category" }
+  ]
+}

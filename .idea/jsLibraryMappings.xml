@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{chiasm-component-v0.2.1, chiasm-data-reduction-v0.2.0, chiasm-dsv-dataset-v0.2.0, chiasm-layout-v0.2.2, chiasm-links-v0.2.1}" />
+  </component>
+</project>

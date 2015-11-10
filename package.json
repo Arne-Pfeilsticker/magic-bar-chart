@@ -1,0 +1,17 @@
+{
+  "name": "magic-bar-chart",
+  "version": "0.0.0",
+  "description": "Magic Bar Chart (Chiasm, AngularJS + Material Design)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chiasm",
+    "angularjs",
+    "material",
+    "design"
+  ],
+  "author": "Curran Kelleher, Arne Pfeilsticker",
+  "license": "MIT"
+}
