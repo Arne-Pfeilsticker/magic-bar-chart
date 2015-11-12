@@ -58,6 +58,10 @@
             shape-rendering: crispEdges;
         }
 
+        .md-display-2 {
+            margin-bottom: 0;
+        }
+
     </style>
 
     <!-- This is the main program that sets up the application. -->
@@ -65,7 +69,7 @@
 
 </head>
 <body>
-<div layout="column" layout-margin layout-fill layout-padding ng-controller="magicBarChartCtrl" >
+<div layout="column" layout-margin layout-fill layout-padding ng-controller="magicBarChartCtrl">
     <div>
         <h1 class="md-display-2">Magic Bar Chart</h1>
     </div>
@@ -73,7 +77,17 @@
     <div layout="row" layout-align="space-between center" layout-sm="column">
 
         <div flex="33" flex-sm="100">
+
             <form>
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+
+                        <h2>
+                            <span>Bar Chart configuration</span>
+                        </h2>
+
+                    </div>
+                </md-toolbar>
 
                 <md-content class="md-whiteframe-z1" layout="column" layout-padding layout-align="space-between left"
                             layout-sm="column">
@@ -129,6 +143,7 @@
                     <!-- Color picker -->
                     <div flex layout="row" layout-align="space-between left">
                         <label class="control-label">Bar Color</label>
+
                         <div style="margin-left: 10px">
                             <input type="color" ng-model="params.barColor">
                         </div>
