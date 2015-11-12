@@ -7,4 +7,4 @@ The aim of this example is:
 * To show several bar charts at the same time.
 * To place the bar charts into different Materials Design [flexboxes](https://material.angularjs.org/latest/layout/container).
 
-(c) MIT
+MIT License

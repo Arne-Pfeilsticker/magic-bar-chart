@@ -9,7 +9,7 @@ chiasm.plugins.barChart = BarChart;
 chiasm.plugins.dataReduction = ChiasmDataReduction;
 
 angular
-    .module("magicBarChart", [])
+    .module("magicBarChart", ['ngMaterial'])
     .controller("magicBarChartCtrl", function ($scope){
 
         $scope.params = {
@@ -18,7 +18,9 @@ angular
             barColor: "#005555"
         };
 
-        $scope.datasets = ["iris", "adult", "auto-mpg"];
+        // $scope.datasets = [{name: "iris"}, {name: "adult"}, {name: "auto-mpg"}];
+        $scope.datasets = ('iris adult auto-mpg').split(' ').map(function (dataset) { return { name: dataset }; });
+
         $scope.params.selectedDataset = "iris";
 
         $scope.columns = [];
@@ -35,6 +37,7 @@ angular
         chiasm.getComponent("loader").then(function (loader){
             loader.when("dataset", function (dataset){
                 $scope.columns = dataset.metadata.columns;
+                console.log($scope.columns)
                 $scope.params.selectedColumn = $scope.columns[2];
                 $scope.$digest();
             });

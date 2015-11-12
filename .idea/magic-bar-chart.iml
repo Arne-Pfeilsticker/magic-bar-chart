@@ -9,5 +9,6 @@
     <orderEntry type="library" name="chiasm-links-v0.2.1" level="application" />
     <orderEntry type="library" name="chiasm-dsv-dataset-v0.2.0" level="application" />
     <orderEntry type="library" name="chiasm-data-reduction-v0.2.0" level="application" />
+    <orderEntry type="library" name="magic-bar-chart node_modules" level="project" />
   </component>
 </module>

@@ -4,13 +4,17 @@
     <meta charset="utf-8">
     <title>Magic Bar Chart</title>
 
-    <!-- Angular + Bootstrap UI -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <!-- Angular + Material Design UI -->
+    <link href="./bower_components/angular-material/angular-material.css" rel="stylesheet" type="text/css"/>
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-material/angular-material.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
 
     <!-- Chiasm Application -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
     <script src="http://curran.github.io/model/cdn/model-v0.2.4.js"></script>
     <script src="http://chiasm-project.github.io/chiasm-component/chiasm-component-v0.2.1.js"></script>
     <script src="http://chiasm-project.github.io/chiasm/chiasm-v0.2.0.js"></script>
@@ -18,7 +22,7 @@
     <script src="http://chiasm-project.github.io/chiasm-links/chiasm-links-v0.2.1.js"></script>
     <script src="http://chiasm-project.github.io/chiasm-dsv-dataset/chiasm-dsv-dataset-v0.2.0.js"></script>
     <script src="http://chiasm-project.github.io/chiasm-data-reduction/chiasm-data-reduction-v0.2.0.js"></script>
-    <script src="barChart.js"> </script>
+    <script src="./barChart.js"></script>
 
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
@@ -60,69 +64,88 @@
 
 </head>
 <body>
-<div class="row">
-    <div class="col-sm-4 widget-container" ng-controller="magicBarChartCtrl">
-        <form class="form-horizontal">
-
-            <!-- Dataset selector -->
-            <div class="form-group">
-                <label for="datasetSelect" class="col-sm-4 control-label">Dataset</label>
-                <div class="col-sm-8">
-                    <select id="datasetSelect" class="form-control"
-                            ng-model="params.selectedDataset" ng-options="dataset for dataset in datasets">
-                    </select>
-                </div>
-            </div>
-
-            <!-- Column selector -->
-            <div class="form-group">
-                <label for="repeatSelect" class="col-sm-4 control-label">Column</label>
-                <div class="col-sm-8">
-                    <select id="repeatSelect" class="form-control"
-                            ng-model="params.selectedColumn" ng-options="column.label for column in columns">
-                    </select>
-                </div>
-            </div>
-
-            <!-- Bin Size slider -->
-            <div class="form-group" ng-if="numericColumnSelected()">
-                <label class="col-sm-4 control-label">Bin Size</label>
-                <div class="col-sm-8">
-                    <input type="range" min="0" max="100" ng-model="params.numBins">
-                </div>
-            </div>
-
-            <!-- Orientation radio buttons -->
-            <div class="form-group">
-                <label class="col-sm-4 control-label">Orientation</label>
-                <div class="col-sm-8">
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions"
-                               value="horizontal" ng-model="params.orientation">
-                        horizontal
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions"
-                               value="vertical" ng-model="params.orientation">
-                        vertical
-                    </label>
-                </div>
-            </div>
-
-            <!-- Color picker -->
-            <div class="form-group">
-                <label class="col-sm-4 control-label">Bar Color</label>
-                <div class="col-sm-8">
-                    <input type="color" ng-model="params.barColor">
-                </div>
-            </div>
-
-        </form>
+<div layout="column" layout-margin layout-fill layout-padding ng-controller="magicBarChartCtrl" >
+    <div>
+        <h1 class="md-display-2">Magic Bar Chart</h1>
     </div>
 
-    <!-- Chiasm component DOM elements will be injected into this div. -->
-    <div class="col-sm-8" id="chiasm-container"></div>
+    <div layout="row" layout-align="space-between center" layout-sm="column">
 
+        <div flex="33">
+            <form>
+
+                <md-content class="md-whiteframe-z1" layout="column" layout-padding layout-align="space-between left"
+                            layout-sm="column">
+
+                    <div layout="row">
+
+                        <!-- Dataset selector -->
+                        <md-input-container>
+                            <label>Dataset</label>
+                            <md-select ng-model="params.selectedDataset">
+                                <md-option ng-repeat="dataset in datasets" value="{{dataset.name}}">
+                                    {{dataset.name}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+
+                        <!-- Column selector -->
+                        <md-input-container>
+                            <label>Column </label>
+                            <md-select ng-model="params.selectedColumn">
+                                <md-option ng-repeat="column in columns" ng-value="column">
+                                    {{column.label}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+
+                    </div>
+
+                    <!-- Bin Size slider -->
+                    <div layout ng-if="numericColumnSelected()">
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Bin Size</span>
+                        </div>
+                        <md-slider flex min="0" max="100" ng-model="params.numBins" aria-label="Bin Size"
+                                   id="blue-slider" class="md-primary">
+                        </md-slider>
+                        <div flex="20" layout layout-align="center center">
+                            <input flex type="number" ng-model="params.numBins" aria-label="Bin Size"
+                                   aria-controls="blue-slider">
+                        </div>
+                    </div>
+
+                    <!-- Orientation radio buttons -->
+
+                    <md-radio-group ng-model="params.orientation">
+                        <div flex layout="row" layout layout-align="center center">
+                            <label control-label>Orientation:</label>
+                            <md-radio-button value="horizontal" class="md-primary">Horizontal</md-radio-button>
+                            <md-radio-button value="vertical">Vertical</md-radio-button>
+                        </div>
+                    </md-radio-group>
+
+                    <!-- Color picker -->
+                    <div flex layout="row" layout-align="space-between left">
+                        <label class="control-label">Bar Color</label>
+                        <div style="margin-left: 10px">
+                            <input type="color" ng-model="params.barColor">
+                        </div>
+
+                    </div>
+
+                </md-content>
+            </form>
+        </div>
+
+
+        <!-- Chiasm component DOM elements will be injected into this div. -->
+
+        <div flex>
+            <div id="chiasm-container" style="position: relative"></div>
+        </div>
+
+    </div>
 </div>
 </body>
 </html>

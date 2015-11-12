@@ -9,9 +9,24 @@
   "keywords": [
     "chiasm",
     "angularjs",
-    "material",
-    "design"
+    "material design"
   ],
   "author": "Curran Kelleher, Arne Pfeilsticker",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arne-Pfeilsticker/magic-bar-chart"
+  },
+  "dependencies": {
+    "angular": "^1.4.7",
+    "chiasm": "^0.2.3",
+    "chiasm-component": "^0.2.3",
+    "chiasm-data-reduction": "^0.2.2",
+    "chiasm-dsv-dataset": "^0.2.2",
+    "chiasm-layout": "^0.2.4",
+    "chiasm-links": "^0.2.3",
+    "d3": "^3.5.6",
+    "lodash": "^3.10.1",
+    "model-js": "^0.2.4"
+  }
 }
