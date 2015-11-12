@@ -31,6 +31,7 @@
         #chiasm-container {
             height: 500px;
             padding: 0;
+            position: relative;
         }
 
         .widget-container {
@@ -71,7 +72,7 @@
 
     <div layout="row" layout-align="space-between center" layout-sm="column">
 
-        <div flex="33">
+        <div flex="33" flex-sm="100">
             <form>
 
                 <md-content class="md-whiteframe-z1" layout="column" layout-padding layout-align="space-between left"
@@ -142,7 +143,7 @@
         <!-- Chiasm component DOM elements will be injected into this div. -->
 
         <div flex>
-            <div id="chiasm-container" style="position: relative"></div>
+            <div id="chiasm-container"></div>
         </div>
 
     </div>
