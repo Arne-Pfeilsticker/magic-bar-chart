@@ -1,8 +1,8 @@
-<div>
+<div ng-controller="MenuController as vm">
     <md-toolbar class="md-menu-toolbar md-whiteframe-z2" ng-style="{background:vm.mdThemeColors.primary['50']}">
         <div layout="row">
-            <md-toolbar-filler ng-style="{background:vm.mdThemeColors.primary.hue2}" style="margin: 0;color: white;"
-                               layout="" layout-align="center center">
+            <md-toolbar-filler ng-style="{background:vm.mdThemeColors.primary.hue2}" layout
+                               layout-align="center center">
                 <md-button ui-sref="home"
                            aria-label="Menue Home">
                     <h1>CP</h1>
@@ -11,7 +11,8 @@
 
             <div layout-fill>
                 <h2 ng-style="{background:vm.mdThemeColors.primary.hue2}" class="md-toolbar-tools" hide-sm>
-                    Chiasm, AngularJS and Material Desing Playground</h2>
+                    Chiasm, AngularJS and Material Desing Playground
+                </h2>
 
                 <md-menu-bar>
                     <button ui-sref="home">

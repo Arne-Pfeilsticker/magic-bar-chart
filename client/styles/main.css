@@ -3,13 +3,11 @@
 **/
 md-toolbar-filler {
     margin: 0;
-    background-color: #00008b;
     color: white;
 }
 
-h2.md-toolbar-tools {
+.md-toolbar-tools {
     margin: 0;
-    background-color: #00008b;
     color: white;
 }
 
