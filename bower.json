@@ -25,6 +25,9 @@
     "angular": "~1.4.7",
     "angular-animate": "~1.4.7",
     "angular-aria": "~1.4.7",
-    "angular-material": "1.0.0-rc3-master-89d285f"
+    "angular-material": "1.0.0-rc3-master-89d285f",
+    "angular-material-icons": "~0.6.0",
+    "angular-sanitize": "~1.4.7",
+    "angular-ui-router": "~0.2.15"
   }
 }

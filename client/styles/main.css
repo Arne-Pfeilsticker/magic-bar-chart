@@ -1,0 +1,48 @@
+/**
+* Angular Material Design
+**/
+md-toolbar-filler {
+    margin: 0;
+    background-color: #00008b;
+    color: white;
+}
+
+h2.md-toolbar-tools {
+    margin: 0;
+    background-color: #00008b;
+    color: white;
+}
+
+#chiasm-container {
+    height: 500px;
+    padding: 0;
+    position: relative;
+}
+
+.widget-container {
+    margin-top: 30px;
+}
+
+.axis {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.axis text {
+    font-size: 12pt;
+}
+
+.axis .label {
+    font-size: 24pt;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: gray;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+
+.md-display-2 {
+    margin-bottom: 0;
+}

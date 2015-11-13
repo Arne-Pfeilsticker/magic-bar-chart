@@ -1,0 +1,37 @@
+<div>
+    <md-toolbar class="md-menu-toolbar md-whiteframe-z2" ng-style="{background:vm.mdThemeColors.primary['50']}">
+        <div layout="row">
+            <md-toolbar-filler ng-style="{background:vm.mdThemeColors.primary.hue2}" style="margin: 0;color: white;"
+                               layout="" layout-align="center center">
+                <md-button ui-sref="home"
+                           aria-label="Menue Home">
+                    <h1>CP</h1>
+                </md-button>
+            </md-toolbar-filler>
+
+            <div layout-fill>
+                <h2 ng-style="{background:vm.mdThemeColors.primary.hue2}" class="md-toolbar-tools" hide-sm>
+                    Chiasm, AngularJS and Material Desing Playground</h2>
+
+                <md-menu-bar>
+                    <button ui-sref="home">
+                        Home
+                    </button>
+                    <md-menu>
+                        <button ng-click="$mdOpenMenu($event)">
+                            Examples
+                        </button>
+                        <md-menu-content>
+                            <md-menu-item>
+                                <md-button ui-sref="magicbarchart" aria-label="Menue Magic Bar Chart">
+                                    Magic Bar Chart
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+
+                </md-menu-bar>
+            </div>
+        </div>
+    </md-toolbar>
+</div>

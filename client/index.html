@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cApp" ng-strict-di>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Magic Bar Chart</title>
+
+    <!-- Angular + Material Design UI -->
+    <link rel="stylesheet" href="../bower_components/angular-material-icons/angular-material-icons.css" />
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
+
+    <link rel="stylesheet" href="./styles/main.css">
+
+</head>
+<body md-theme='default'>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div ng-include="'app/layout/menu.html'"></div>
+
+<md-content ui-view flex layout-padding></md-content>
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-material/angular-material.js"></script>
+<script src="../bower_components/angular-animate/angular-animate.js"></script>
+<script src="../bower_components/angular-aria/angular-aria.js"></script>
+<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+<!-- Chiasm Application -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<script src="http://curran.github.io/model/cdn/model-v0.2.4.js"></script>
+<script src="http://chiasm-project.github.io/chiasm-component/chiasm-component-v0.2.1.js"></script>
+<script src="http://chiasm-project.github.io/chiasm/chiasm-v0.2.0.js"></script>
+<script src="http://chiasm-project.github.io/chiasm-layout/chiasm-layout-v0.2.2.js"></script>
+<script src="http://chiasm-project.github.io/chiasm-links/chiasm-links-v0.2.1.js"></script>
+<script src="http://chiasm-project.github.io/chiasm-dsv-dataset/chiasm-dsv-dataset-v0.2.0.js"></script>
+<script src="http://chiasm-project.github.io/chiasm-data-reduction/chiasm-data-reduction-v0.2.0.js"></script>
+
+<!-- This is the main program that sets up the application. -->
+<script src="app/app.modules.js"></script>
+<script src="app/app.js"></script>
+
+<script src="app/core/chiasm.service.js"></script>
+<script src="app/core/state-watcher.service.js"></script>
+<script src="app/layout/colors.js"></script>
+<script src="app/home/home.controller.js"></script>
+<script src="app/magic-bar-chart/magic-bar-chart.controller.js"></script>
+
+
+</body>
+</html>
