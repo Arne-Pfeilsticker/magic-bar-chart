@@ -55,6 +55,12 @@
                 //    }]
                 //}
             })
+            .state('crossfilterchiasm', {
+                url: '/crossfilterchiasm',
+                templateUrl: 'app/crossfilter-chiasm/crossfilter-chiasm.html',
+                controller: 'CrossfilterChiasmController',
+                controllerAs: 'vm'
+            })
         ;
 
         $urlRouterProvider.otherwise('/');

@@ -1,0 +1,47 @@
+<div layout="column" layout-margin layout-fill layout-padding>
+    <div>
+        <h1 class="md-display-2">Crossfilter &amp; Chiasm</h1>
+
+        <p>
+            Drawn from Curren's <a href="http://bl.ocks.org/curran/87d038562333a7ad4a64">
+            Crossfilter &amp; Chiasm</a>
+        </p>
+
+    </div>
+
+    <div layout="row" layout-align="space-between center" layout-sm="column">
+
+        <div class="container" ng-show="vm.loading">
+            <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+        </div>
+
+        <!-- Chiasm component DOM elements will be injected into this div. -->
+
+        <div flex>
+            <div id="chiasm-container"></div>
+        </div>
+
+    </div>
+
+    <div id="readme" class="blob instapaper_body">
+        <article class="markdown-body entry-content" itemprop="mainContentOfPage"><p>An example set of coordinated views
+            that use <a href="http://square.github.io/crossfilter/">Crossfilter</a> and <a
+                    href="https://github.com/chiasm-project/chiasm">Chiasm</a>.</p>
+
+            <p>The idea with this is to introduce a general Crossfilter component that can be set up to work with any
+                visualization components in Chiasm.</p>
+
+            <p>Draws from:</p>
+
+            <ul>
+                <li><a href="https://github.com/square/crossfilter/blob/gh-pages/index.html">Crossfilter Example
+                    Code</a>.
+                </li>
+                <li><a href="http://bl.ocks.org/curran/1af08ad6cdb01707c33f">Chiasm Boilerplate</a></li>
+                <li>Bar Chart in <a href="http://bl.ocks.org/curran/3cc1a2a289dddbd64688">Fundamental Visualizations</a>
+                </li>
+            </ul>
+
+        </article>
+    </div>
+</div>

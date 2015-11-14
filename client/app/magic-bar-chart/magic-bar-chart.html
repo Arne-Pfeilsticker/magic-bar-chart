@@ -1,6 +1,11 @@
 <div layout="column" layout-margin layout-fill layout-padding>
     <div>
         <h1 class="md-display-2">Magic Bar Chart</h1>
+
+        <p>
+            Drawn from Curren's <a href="http://bl.ocks.org/curran/b6e1d23c16dc76371a92">Magic Bar Chart</a></li>
+        </p>
+
     </div>
 
     <div layout="row" layout-align="space-between center" layout-sm="column">
@@ -90,5 +95,51 @@
             <div id="chiasm-container"></div>
         </div>
 
+    </div>
+
+    <div id="readme" class="blob instapaper_body">
+        <article class="markdown-body entry-content" itemprop="mainContentOfPage"><p>This example shows one way to add a
+            user interface on top of a <a href="https://github.com/chiasm-project/chiasm">Chiasm</a> application (using
+            AngularJS and Angular Material).
+            Every time an interaction is performed with the widgets on the left, a new Chiasm configuration is generated
+            and passed into the Chaism runtime environment.
+            The runtime environment then computes the difference between the previous configuration and the new
+            configuration,
+            then executes actions corresponding to the changes to the appropriate component instances.</p>
+
+            <p>Features of this example include:</p>
+
+            <ul>
+                <li>Selection from three preselected data sets from the <a
+                        href="https://archive.ics.uci.edu/ml/datasets.html">UCI Machine Learning Repository</a></li>
+                <li>Selection of a single column from the selected data set to visualize in the bar chart.
+
+                    <ul>
+                        <li>Numeric columns will be aggregated into bins and presented as a histogram.</li>
+                        <li>Categorical columns will be aggregated and presented as a bar chart, where each bar
+                            corresponds to a unique value.
+                        </li>
+                    </ul>
+                </li>
+                <li>Selection of bar chart orientation between horizontal and vertical.</li>
+                <li>Selection of bar fill color.</li>
+            </ul>
+
+            <p>Known Issues (e.g. with the "adult" data set):</p>
+
+            <ul>
+                <li>The original "adult" data set has no column headline. The data set used has only 500 of 30,000 lines
+                    of data. When using the original data set add the first line of the adult.csv data set.
+                </li>
+                <li>The tick labels overlap each other on the X axis in many cases</li>
+                <li>The tick labels overlap with the axis label on the Y axis</li>
+            </ul>
+
+            <p>Draws from</p>
+
+            <ul>
+                <li><a href="http://bl.ocks.org/curran/87d038562333a7ad4a64">Crossfilter &amp; Chiasm</a></li>
+            </ul>
+        </article>
     </div>
 </div>

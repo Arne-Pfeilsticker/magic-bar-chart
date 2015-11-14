@@ -10,5 +10,6 @@
     <orderEntry type="library" name="chiasm-dsv-dataset-v0.2.0" level="application" />
     <orderEntry type="library" name="chiasm-data-reduction-v0.2.0" level="application" />
     <orderEntry type="library" name="magic-bar-chart node_modules" level="project" />
+    <orderEntry type="library" name="crossfilter" level="application" />
   </component>
 </module>

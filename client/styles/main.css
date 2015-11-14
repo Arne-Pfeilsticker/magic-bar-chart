@@ -17,6 +17,13 @@ md-toolbar-filler {
     position: relative;
 }
 
+/* Style the brush. Draws from http://bl.ocks.org/mbostock/4343214 */
+.brush .extent {
+    stroke: black;
+    fill-opacity: .2;
+    shape-rendering: crispEdges;
+}
+
 .widget-container {
     margin-top: 30px;
 }
